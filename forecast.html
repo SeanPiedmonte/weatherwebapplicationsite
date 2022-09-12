@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSE 383 Final Project</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="finalcss.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie-edge">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="zipcode.js"></script>
+</head>
+<div class="navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">CSE 383 Final Project</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="zipcode.html">Zip Code Lookup</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="forecast.html">Weather Forecast<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="get.html">Forecast History</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+<div>
+<h1>Find the forecast for the next week in your zipcode</h1>
+</div>
+<div class="container-fluid">
+	<p>Enter zipcode for forecast</p>
+	<label for="zipcode">Zipcode:</label>
+	<input type="text" id="zipcode" name="zipcode">
+	<button type="button" class="btn btn-dark" onclick="getForecast()">Get Zip Code</button>
+</div>
+<div class="container-fluid">
+<table class='table forecastTable'>
+	<thead><tr class="d-flex"><th class="col-1">Date</th><th class="col-1">High</th><th class="col-1">Low</th><th class="col-1">Temp: Day</th><th class="col-1">Temp: Night</th><th class="col-1">Wind Speed</th><th class="col-1">Weather Type</th><th class="col-1">Humidity</th></tr><thead>
+	<tbody id='forecasts'></tbody>
+</table>
+</div>

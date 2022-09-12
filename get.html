@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSE 383 Final Project</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="finalcss.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie-edge">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="zipcode.js"></script>
+</head>
+<div class="navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">CSE 383 Final Project</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="zipcode.html">Zip Code Lookup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="forecast.html">Weather Forecast</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="get.html">Forecast History<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+<div class="container-fluid">
+	<p>Retrieve Data from A Specific Date</p>
+	<label for="date">Date:</label>
+	<input class="form-control" type="text" id="date" name="date">
+	<label for="sort">Sort (Enter 1 or 2):</label>
+	<input class="form-control" type="text" id="sort" name="sort">
+	<button type="button" class="btn btn-dark" onclick="getData()">Get Data</button>
+</div>
+<div class="container-fluid">
+	<table class='table display'>
+		<thead><tr class="d-flex"><th class="col-3">Date</th><th class="col-3">Location</th><th class="col-3">Low</th><th class="col-3">High</th><th class="col-3">Forecast</th></tr></thead>
+		<tbody id='getdata'></tbody>
+	</table>
+</div>
+		
